@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fdf8e8;
+  --color-gold-100: #f9edc5;
+  --color-gold-200: #f3db8a;
+  --color-gold-300: #ecc84f;
+  --color-gold-400: #e0b420;
+  --color-gold-500: #c49a13;
+  --color-gold-600: #a67c0f;
+  --color-gold-700: #875d11;
+  --color-gold-800: #6e4a15;
+  --color-gold-900: #5c3d16;
+  --color-premium-dark: #1a1614;
+  --color-premium-light: #faf7f2;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #faf7f2;
+    color: #3d3328;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #c49a13;
+  border-radius: 3px;
+}
